@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon - Jeux vidéos</title>
+    <meta
+      name="description"
+      content="Plongez dans l'univers de Pokémon avec notre sélection de jeux de la première génération. Redécouvrez les origines de la série et revivez les aventures captivantes de Sacha, Ondine et Pierre. Affrontez les champions d'arène et capturez les Pokémon les plus rares pour devenir le meilleur dresseur de la région de Kanto. "
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/pokeball.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../cssMin/bootstrap.min.css" />
+    <link rel="stylesheet" href="../cssMin/indexCommon.min.css" />
+    <link rel="stylesheet" href="../cssMin/games.min.css" />
+    <script defer src="../jsMin/gamesCards.min.js"></script>
+    <script defer src="../jsMin/burgerMenu.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="d-flex justify-content-between align-items-center">
+            <a href="./home.html">
+              <img  
+                src="../assets/images/Logo-Pokemon.png"
+                alt="Logo Pokémon"
+              />
+            </a>
+          <section class="d-flex">
+            <a href="./home.html" class="link-nav">ACCUEIL</a>
+            <a href="./anime.html" class="link-nav">ANIME</a>
+            <a href="./cartes.html" class="link-nav">CARTES</a>
+            <a href="./games.html" class="link-nav">JEUX VIDEOS</a>
+            <a href="./pokedex.html" class="link-nav">POKEDEX</a>
+          </section>
+          <a id="link" href="#"><span id="burger"></span></a>
+        </div>
+        <ul>
+          <li><a href="./home.html" class="link-menu">ACCUEIL</a></li>
+          <li><a href="./anime.html" class="link-menu">ANIME</a></li>
+          <li><a href="./cartes.html" class="link-menu">CARTES</a></li>
+          <li><a href="./games.html" class="link-menu">JEUX VIDEOS</a></li>
+          <li><a href="./pokedex.html" class="link-menu">POKEDEX</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container py-2">
+      <div class="d-flex justify-content-end">
+        <audio src="../song/games_songs/rondoudouSong.mp3"></audio>
+        <p id="tryme">Let's sing</p>
+        <img
+          src="../assets/images/Rondoudou.png"
+          alt=""
+          id="rondou"
+          onclick="tooglePlay()"
+        />
+      </div>
+
+      <section>
+        <h1 class="poketitle mainBall">Les jeux videos</h1>
+
+        <div class="textIntro">
+          <p class="px-4">Génération 1(1996-1999)</p>
+          <p>
+            Pokémon est sorti pour la première fois en 1996 au Japon avec les
+            versions Rouge et Verte. Depuis, l'univers a évolué jusqu'à
+            maintenant, des dizaines de jeux et applications sont sortis, que
+            vous retrouvez ici.
+          </p>
+        </div>
+      </section>
+
+      <section> <!-- Section des jeux sur Game Boy  -->
+        <h2 class="poketitle secondBall">Jeux sur Game Boy</h2>
+
+        <section class="cardGames justify-content-center gap-5">
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Version Rouge</h3>
+
+              <img
+                src="../assets/images/game_red.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon version Rouge</strong> est un des tout premiers
+                jeu de la franchise Pokémon à avoir débarqué sur notre continent
+                en 1999.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Version Bleue</h3>
+              <img
+                src="../assets/images/game_blue.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon version Bleue</strong> est un des tout premiers
+                jeu de la franchise Pokémon à avoir débarqué sur notre continent
+                en 1999.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Version Verte</h3>
+              <img
+                src="../assets/images/game_green.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon version Verte</strong> est un des tout premiers
+                jeu de la franchise Pokémon sorti au Japon en 1996.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Version Jaune</h3>
+              <img
+                src="../assets/images/game_yellow.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon version Jaune</strong> est une réédition des
+                versions Rouge et Bleue arrivée en France en 2000.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+        </section>
+      </section>
+
+      <section>  <!-- Section des jeux sur Game Boy Color  -->
+        <h2 class="poketitle secondBall">Jeux sur Game Boy Color</h2>
+
+        <section class="cardGames justify-content-center gap-5">
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Trading Card Game</h3>
+              <img
+                src="../assets/images/gameColor_Trading.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon Trading Card Game</strong> est un jeu de
+                collection de cartes Pokémon arrivée en France en 2000.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Pinball</h3>
+              <img
+                src="../assets/images/gameColor_Pinball.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon Pinball</strong> est un jeu vidéo de flipper
+                arrivée en France en 2000.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Card GB2</h3>
+              <img
+                src="../assets/images/gameColor_GB2.png"
+                alt=""
+                class="jacketGames jacketResize"
+              />
+              <p>
+                <strong>Pokémon Card GB2</strong> est un jeu de collection de
+                cartes Pokémon sorti au Japon en 2001.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+        </section>
+      </section>
+
+      <section>  <!-- Section des jeux sur console  -->
+        <h2 class="poketitle secondBall">Jeux sur console</h2>
+
+        <section class="cardGames justify-content-center gap-5">
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Stadium "0"</h3>
+              <img
+                src="../assets/images/gameConsole_StadiumJP.png"
+                alt=""
+                class="jacketGames jacketResize"
+              />
+              <p>
+                <strong>Pokémon Stadium "0"</strong> est le premier jeu de la
+                série Stadium et est sorti au Japon en 1998.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Stadium</h3>
+              <img
+                src="../assets/images/gameConsole_Stadium.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon Stadium</strong> est le second jeu de la série
+                Stadium et est arrivée en France en 2000.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Snap</h3>
+              <img
+                src="../assets/images/gameConsole_Snap.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon Snap</strong> est un jeu vidéo de la série
+                Pokémon sorti au Japon en mars 1999.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Pokémon Puzzle League</h3>
+              <img
+                src="../assets/images/gameConsole_Puzzle.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Pokémon Puzzle League</strong> est un jeu vidéo de
+                puzzle sorti en 2000 sur Nintendo 64.
+              </p>
+            </article>
+            <div class="glow"></div>
+          </div>
+
+          <div class="cardGame">
+            <article class="contentCardGame">
+              <h3>Hey You, Pikachu!</h3>
+
+              <img
+                src="../assets/images/gameConsole_Heyyou.png"
+                alt=""
+                class="jacketGames"
+              />
+              <p>
+                <strong>Hey You, Pikachu!</strong> est un jeu vidéo de la
+                première génération pour la Nintendo 64, sorti uniquement au
+                Japon en 1998
+              </p>
+            </article>
+
+            <div class="glow"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <nav class="">
+        <a href="./home.html">ACCUEIL</a>
+        <a href="./anime.html">ANIME</a>
+        <a href="./cartes.html">CARTES</a>
+        <a href="./games.html">JEUX VIDEOS</a>
+        <a href="./pokedex.html">POKEDEX</a>
+      </nav>
+
+      <a href="#">
+        <img src="../images/imagesCartes/Logo-Pokemon.png" alt="Logo Pokémon" />
+      </a>
+
+      <p>Par Alvin, Loïc, Jordan et Loëvane.</p>
+      <p>Diginamic 2023</p>
+    </footer>
+  </body>
+</html>
