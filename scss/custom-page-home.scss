@@ -1,0 +1,186 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+//fixe des valeurs sur tous les éléments
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.presentation {
+  padding: 1em 15%;
+  text-align: center;
+  margin-top: 3em;
+  .content_collapse {
+    display: none;
+  }
+}
+
+//applique des bordures avant et après le bouton read-more et un effet au survol
+.read-more {
+  background-color: white;
+  border: 0;
+  color: $jaunepoke;
+  text-align: end;
+  margin: 0 2em 2em 0;
+  position: relative;
+  width: 6em;
+  padding: 0.3em;
+  float: right;
+  &::before {
+    position: absolute;
+    content: "";
+    border-top: solid 3px $jaunepoke;
+    border-left: solid 3px $jaunepoke;
+    width: 30%;
+    top: -3px;
+    left: -3px;
+    transition: 0.3s all ease-in-out;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    border-bottom: solid 3px $jaunepoke;
+    border-right: solid 3px $jaunepoke;
+    width: 30%;
+    bottom: -3px;
+    right: -3px;
+    transition: 0.3s all ease-in-out;
+  }
+  &:hover {
+    color: $bleunuit;
+  }
+  &:hover::after,
+  &:hover::before {
+    width: 40%;
+    border-color: $bleunuit;
+  }
+}
+
+.title_favorite {
+  clear: both;
+  text-align: center;
+  margin: 1em;
+}
+
+.card-container {
+  padding: 0 3.5em;
+  margin: 2em 0;
+  transition: all 0.3s ease;
+
+  //permet de retrecir et appliquer un filtre sur les cartes qui ne sont pas survolés
+  &:hover .card:not(:hover) {
+    filter: brightness(0.5) blur(3px);
+    transform: scale(0.8);
+  }
+
+  .card {
+    background-size: cover;
+    height: 14em;
+    border-radius: 10px;
+    justify-content: end;
+    align-items: flex-start;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+    .card-name {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-left: 1em;
+    }
+    .card-description {
+      font-size: 15px;
+      margin-left: 1.5em;
+    }
+  }
+
+  .card-alvin {
+    background-image: url(../assets/images/Deoxys.png);
+    background-position: top center;
+  }
+  .card-loic {
+    background-image: url(../assets/images/evoli.png);
+    background-position: center center;
+  }
+  .card-jordan {
+    background-image: url(../assets/images/lucario.webp);
+    background-position: top center;
+  }
+  .card-loevane {
+    background-image: url(../assets/images/pikachu.jpg);
+    background-position: bottom right;
+  }
+}
+
+.section-home {
+  padding: 3em 0;
+  height: 100%;
+  //cible les enfant impairs
+  &:nth-child(odd) {
+    width: 100%;
+    background-color: $lightgray;
+  }
+
+  p{
+    margin-bottom: 2em;
+  }
+  //applique une mixin button sur les liens internes
+  .internal-links {
+    @include button();
+    margin-top: 3em;
+  }
+
+  //applique un effet de zoom sur les images
+  .zoom-img {
+    overflow: hidden;
+    text-align: center;
+    width: 22em;
+    height: 15em;
+    img {
+      width: 100%;
+      height: 100%;
+      &:hover {
+        width: 100%;
+        transform: scale(1.1);
+        transition: 1s ease-in-out;
+      }
+    }
+  }
+}
+
+// au dessus de "md" > 768px
+@include media-breakpoint-up(md) {
+  .img_home_head {
+    max-width: 65%;
+    height: auto;
+  }
+
+  .presentation {
+    margin: 2em;
+    .content_collapse {
+      display: inline;
+    }
+  }
+
+  .read-more {
+    @include visually-hidden;
+  }
+
+  .card-container {
+    padding: 0;
+  }
+}
+
+// en dessous de "md" < 768px
+@include media-breakpoint-down(md) {
+  .img_home_head {
+    @include visually-hidden;
+  }
+
+  .titre {
+    text-align: center;
+  }
+}

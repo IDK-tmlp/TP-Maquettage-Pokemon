@@ -1,0 +1,170 @@
+// sass --watch .\scss\cartesPage.scss .\css\cartesPage.css
+
+@import "./variables.scss";
+
+@import "./mixins.scss";
+.cartesHead {
+    padding: 2%;
+    background-color: $verylightgray;
+    & > p {
+        padding-top: 1%;
+    }
+}
+// Titre 2 banner : ajout background et mise en forme
+.cardBanner {
+    background-image: url("../assets/images/backCard.png");
+    background-size: contain;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    & > * {
+        background-color: white;
+        display: inline;
+        padding: 1%;
+        margin: 0%;
+        border: 2px solid lightgrey;
+    }
+}
+
+.superBall {
+    //Changement de la police en pokemon
+    font-family: "pocketMonk";
+    color: $jaunepoke;
+    -webkit-text-stroke: 2px $bleunuit;
+    //Ajout d'une pokeball devant le titre
+    @include icon(50px, "../assets/images/superBall.png");
+}
+
+//Ajout d'un dos de carte devant les noms de set
+.backCard {
+    display: flex;
+    justify-content: center;
+    @include icon(50px, "../assets/images/boosterSetDeBase.png");
+    &:before {
+        background-size: 45px 70px;
+        height: 70px;
+        margin-top: -15px;
+    }
+}
+
+// L'image prends toute la largeur de son contenant et zoom au hover
+.imgDisplay {
+    width: 100%;
+    // Merci Loëvane pour le zoom
+    overflow: hidden;
+    text-align: center;
+    &:hover {
+        width: 100%;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.1);
+        -webkit-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+    }
+}
+
+.cardSection {
+    background-color: #e9edfa;
+    padding: 3%;
+}
+
+// Arrangements de chaque section display
+.display {
+    background-color: white;
+    border: 3px solid $jaunepoke;
+    margin: 1%;
+    border-radius: 10%;
+    padding: 3%;
+    & > *:nth-child(1) {
+        padding-bottom: 10%;
+    }
+}
+
+//Taille petit écran
+@media screen and (max-width: 576px) {
+    .display {
+        //Affiche 1 carte
+        width: 80%;
+    }
+    // Gestion de taille titre 1
+    .pokeBall {
+        font-size: 30px;
+        &:before {
+            width: 35px;
+            height: 35px;
+        }
+    }
+    // Gestion de taille titre 2
+    .superBall {
+        font-size: 20px;
+
+        &:before {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .backCard:before {
+        background-size: 35px 60px;
+        height: 60px;
+        margin-top: -8px;
+    }
+}
+
+//Taille moyen écran
+@media screen and (min-width: 577px) {
+    .display {
+        // Affichage de 2 cards
+        width: 45%;
+    }
+    // Gestion de taille titre 1
+    .pokeBall {
+        font-size: 35px;
+        &:before {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    // Gestion de taille titre 2
+    .superBall {
+        font-size: 25px;
+        -webkit-text-stroke: 1px $bleunuit;
+        &:before {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .backCard:before {
+        background-size: 35px 60px;
+        height: 60px;
+        margin-top: -8px;
+    }
+}
+//Taille grand écran
+@media screen and (min-width: 992px) {
+    .display {
+        // Affiche de 3 cards
+        width: 30%;
+    }
+    // Gestion de taille titre 1
+    .pokeBall {
+        font-size: 35px;
+        &:before {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    // Gestion de taille titre 2
+    .superBall {
+        font-size: 30px;
+        -webkit-text-stroke: 2px $bleunuit;
+        &:before {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .backCard:before {
+        background-size: 45px 70px;
+        height: 70px;
+        margin-top: -15px;
+    }
+}

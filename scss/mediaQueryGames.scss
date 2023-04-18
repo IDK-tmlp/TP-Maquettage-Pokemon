@@ -1,0 +1,22 @@
+@include media-breakpoint-down(md) {
+    .cardGames {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .contentCardGame {
+        transform: none !important;
+      }
+      .glow {
+        transform: none;
+        visibility: hidden;
+      }
+}
+@include media-breakpoint-up(md) {
+    .cardGames {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+}
+

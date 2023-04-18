@@ -1,0 +1,14 @@
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+$bleunuit: #3b5ba7;
+$bleu: #357acc;
+$jaunepoke: #ffcb05;
+$vide: #ff050500;
+$verylightgray: #fafafa;
+$lightgray: #eff1f8;
+
+// Definition de la police
+@font-face {
+    font-family: "pocketMonk";
+    src: URL("../font/PocketMonk.ttf") format("truetype");
+}
